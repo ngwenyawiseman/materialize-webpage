@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>materialize-webpage</title>
+  <link rel="stylesheet" href="./materialize.css">
+  <style>
+    /*Table
+----------------------------------------*/
+    body {
+      margin-left: 1.5em;
+      margin-right: 1.5em;
+    }
+
+    .table {
+      border: 1px solid black;
+    }
+
+    .t1 {
+      background-color: lightblue;
+      border: 1px solid black;
+    }
+
+    .t2 {
+      background-color: lightpink;
+      border: 1px solid black;
+    }
+
+    @media (max-width: 960px) {
+      .mid-text {
+        float: right !important;
+      }
+    }
+
+    .backImage {
+      background-image: url('/images/istockphoto-184421942-612x612.jpg');
+      width: 250px;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 50vh;
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body class="amber lighten-4">
+  <div class="row">
+    <h1 class="col s12 red accent-2">{{user.fullName}} </h1>
+  </div>
+
+  <div class="row backImage">
+    <div class="col s12 m6"></div>
+    <img src="{{user.photo}}" width="270" height="300" class="responsive-img square" style="float:right;">
+  </div>
+  </div>
+
+  <div class="row">
+    <h2 class="col s12  red accent-2">{{city.name}}</h2>
+    <div class="row">
+      <img src="{{city.photo}}" class="s12 l4 lf-pic">
+      <p class="col s12 l8">{{city.description}}
+      </p>
+    </div>
+  </div>
+  </div>
+
+
+  <div>
+    <div class="row">
+      <h2 class="col s12 red accent-2">{{foreignLanguage.language}}</h2>
+      <p class="col s12">As a fan of documentaries and the Discovery Channel, I had always found it fascinating on the
+        way of life in the Arabian nation. Here is a simple translation of some of the terms in Arabic.</p>
+      <div class="col s12">
+        <table class="table" style="border: 1px solid black;">
+          <tr class="t1">
+            <th>Arabic</th>
+            <th>English translation</th>
+          </tr>
+
+          <tr class="t2">
+            <th>{{foreignLanguage.phrases.[0].arabic}}</th>
+            <th>{{foreignLanguage.phrases.[0].english}}</th>
+          </tr>
+
+          <tr class="t2">
+            <th>{{foreignLanguage.phrases.[1].arabic}}</th>
+            <th>{{foreignLanguage.phrases.[1].english}}</th>
+          </tr>
+
+          <tr class="t2">
+            <th>{{foreignLanguage.phrases.[2].arabic}}</th>
+            <th>{{foreignLanguage.phrases.[2].english}}</th>
+          </tr>
+
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <div class="row">
+      <h2 class="col s12 red accent-2">Favourite subjects</h2>
+
+      <div>
+        <div>
+          <div class="col s12 m8 l4">
+            <div class="row">
+              <h3 class="col s12 light-blue lighten-5">{{favouriteSubjects.[0].name}}</h3>
+            </div>
+            <div class="row">
+              <img class="col s12" src="{{favouriteSubjects.[0].image}}">
+            </div>
+
+          </div>
+        </div>
+
+        <div class="col s12 m8 l4">
+          <div class="row">
+            <h3 class="col s12 light-blue lighten-5">{{favouriteSubjects.[1].name}}</h3>
+          </div>
+
+          <div class="row">
+            <img class="col s12" src="{{favouriteSubjects.[1].image}}">
+          </div>
+        </div>
+
+        <div class="col s12 m8 l4">
+          <div class="row">
+            <h3 class="col s12 light-blue lighten-5">{{favouriteSubjects.[2].name}}</h3>
+          </div>
+          <div class="row">
+            <img class="col s12" src="{{favouriteSubjects.[2].image}}">
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+
+  <div>
+    <div class="row">
+      <h2 class="col-12 red accent-2">Historical places</h2>
+      <div>
+        <div class="row">
+
+          <div class="col s12  l4">
+            <h3 class=" col s12 light-blue lighten-5">{{historicalPlaces.[0].name}}</h3>
+            <div class="row">
+              <p class="col s6" style="text-align: justify;">
+                {{historicalPlaces.[0].description}}</p>
+              <img class="col s6" src="{{historicalPlaces.[0].photo}}" style="padding-top: 1.5em;">
+            </div>
+          </div>
+
+          <div class="col s12  l4">
+            <h3 class="col s12 light-blue lighten-5">{{historicalPlaces.[1].name}}</h3>
+            <div class="row">
+              <p class="col s6 mid-text" style="text-align: justify;">{{historicalPlaces.[1].description}}
+              </p>
+              <img class="col s6" src="{{historicalPlaces.[1].photo}}" style="padding-top: 1.5em;">
+              <!-- width="250" style="padding-top: 1.5em;"-->
+            </div>
+          </div>
+
+          <div class="col s12  l4">
+            <h3 class=" col s12 light-blue lighten-5">{{historicalPlaces.[2].name}}</h3>
+            <div class="row">
+              <p class="col s6" style="text-align: justify;">{{historicalPlaces.[2].description}}</p>
+              <img class="col s6" src="{{historicalPlaces.[2].photo}}" style="padding-top: 1.5em;">
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+  <footer>Copyrights reserved @MntimandeConsultingServices🐊 </footer>
+</body>
+</html>

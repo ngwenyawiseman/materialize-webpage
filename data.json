@@ -1,0 +1,59 @@
+{
+    "user": {
+        "fullName": "Thulebona Ngwenya",
+        "photo": "images/tracy.jpg"
+    },
+    "city": {
+        "name": "Dubai",
+        "photo": "images/images.jpeg",
+        "description": "Dubai boasts a captivating fusion of modern wonders, cultural richness, and luxurious experiences. From iconic skyscrapers such as the Burj Khalifa to premier shopping destinations like the Dubai Mall, the city offers unrivaled architectural marvels and opulent leisure options. Its diverse culinary scene, vibrant nightlife, and pristine beaches cater to every preference. Dubai's dedication to innovation is evident in ambitious projects like the Palm Jumeirah and futuristic transportation systems. Whether craving desert adventures, luxury resorts, or cultural immersion, Dubai guarantees an unforgettable experience for travelers seeking the extraordinary."
+    },
+    "foreignLanguage": {
+        "language": "Arabic",
+        "phrases": [
+            {
+                "english": "money",
+                "arabic": "mane"
+            },
+            {
+                "english": "Hello",
+                "arabic": "mrhban"
+            },
+            {
+                "english": "Nice to meet you",
+                "arabic": "saeid biliqayik"
+            }
+        ]
+    },
+    "favouriteSubjects": [
+        {
+            "name": "Fullstack Web Development",
+            "image": "images/full-stack-web-developer.png"
+        },
+        {
+            "name": "4IR Technology Bootcamp",
+            "image": "images/4IR.jpeg"
+        },
+        {
+            "name": "Engineering Business Systems",
+            "image": "images/Engineering Business Systems.jpg"
+        }
+    ],
+    "historicalPlaces": [
+        {
+            "name": "Mandela House Museum",
+            "photo": "images/MADELA-HOUSE-MUESUM-JETLIFE-VACATIONS.jpg",
+            "description": "The Mandela House Museum in Johannesburg, South Africa, was once the residence of Nelson Mandela and his family."
+        },
+        {
+            "name": "Walter Sisulu Shopping Center",
+            "photo": "images/walter-sisulu-square-of-dedication-322950.webp",
+            "description": "The Walter Sisulu Square of Dedication in Kliptown, Soweto, South Africa, commemorates the signing of the Freedom Charter in 1955."
+        },
+        {
+            "name": "Constitution Hill",
+            "photo": "images/constitution Hill.jpg",
+            "description": "Constitution Hill in Johannesburg, South Africa is a historic site that once served as a notorious prison complex housing political activists including Nelson Mandela and Mahatma Gandhi."
+        }
+    ]
+}
