@@ -8,27 +8,32 @@
   <title>materialize-webpage</title>
   <link rel="stylesheet" href="./materialize.css">
   <style>
-
    
-    /*Table
-----------------------------------------*/
     body {
       margin-left: 1.5em;
       margin-right: 1.5em;
-      background-color: gray;
+      background-image: url('/images/TABLE.jpg');
+      background-size: cover;
+      background-position: center;
     }
 
+    .overlay {
+      background-color: rgba(128, 120, 120, 0.5); /*To hinder the transparanncy*/
+      padding: 1em;
+      border-radius: 5px;
+    }
+/*Table---------------------------------------------------------------------*/
     .table {
       border: 1px solid black;
     }
 
     .t1 {
-      background-color: lightblue;
+      background-color: rgb(22, 90, 112);
       border: 1px solid black;
     }
 
     .t2 {
-      background-color: lightpink;
+      background-color: rgb(170, 158, 160);
       border: 1px solid black;
     }
 
@@ -38,43 +43,35 @@
       }
     }
 
-    .backImage {
-      background-image: url('images/istockphoto-184421942-612x612.jpg');
-      width: 250px;
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      height: 50vh;
-      width: 100%;
+    /* Enhance text readability */
+    h1, h2, p, th {
+      color: white; 
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); 
     }
   </style>
 </head>
 
 <body>
-  <div class="row">
-    <h1 class="col s12 red accent-2">{{user.fullName}} </h1>
+  <div class="row overlay">
+    <h1 class="col s12 teal lighten-2">{{user.fullName}}</h1>
   </div>
 
-  <div class="row backImage">
+  <div class="row backImage overlay">
     <div class="col s12 m6"></div>
     <img src="{{user.photo}}" width="270" height="300" class="responsive-img square" style="float:right;">
   </div>
-  </div>
 
-  <div class="row">
-    <h2 class="col s12  red accent-2">{{city.name}}</h2>
+  <div class="row overlay">
+    <h2 class="col s12 teal lighten-2">{{city.name}}</h2>
     <div class="row">
       <img src="{{city.photo}}" class="s12 l4 lf-pic">
-      <p class="col s12 l8">{{city.description}}
-      </p>
+      <p class="col s12 l8">{{city.description}}</p>
     </div>
   </div>
-  </div>
 
-
-  <div>
+  <div class="overlay">
     <div class="row">
-      <h2 class="col s12 red accent-2">{{foreignLanguage.language}}</h2>
+      <h2 class="col s12 teal lighten-2">{{foreignLanguage.language}}</h2>
       <p class="col s12">As a fan of documentaries and the Discovery Channel, I had always found it fascinating on the
         way of life in the Arabian nation. Here is a simple translation of some of the terms in Arabic.</p>
       <div class="col s12">
@@ -104,9 +101,9 @@
     </div>
   </div>
 
-  <div>
+  <div class="overlay">
     <div class="row">
-      <h2 class="col s12 red accent-2">Favourite subjects</h2>
+      <h2 class="col s12 teal lighten-2">Favourite subjects</h2>
 
       <div>
         <div>
@@ -145,15 +142,14 @@
     </div>
   </div>
 
-
-  <div>
+  <div class="overlay">
     <div class="row">
-      <h2 class="col-12 red accent-2">Historical places</h2>
+      <h2 class="col s12 teal lighten-2">Historical places</h2>
       <div>
         <div class="row">
 
-          <div class="col s12  l4">
-            <h3 class=" col s12 light-blue lighten-5">{{historicalPlaces.[0].name}}</h3>
+          <div class="col s12 l4">
+            <h3 class="col s12 light-blue lighten-5">{{historicalPlaces.[0].name}}</h3>
             <div class="row">
               <p class="col s6" style="text-align: justify;">
                 {{historicalPlaces.[0].description}}</p>
@@ -161,27 +157,23 @@
             </div>
           </div>
 
-          <div class="col s12  l4">
+          <div class="col s12 l4">
             <h3 class="col s12 light-blue lighten-5">{{historicalPlaces.[1].name}}</h3>
             <div class="row">
-              <p class="col s6 mid-text" style="text-align: justify;">{{historicalPlaces.[1].description}}
-              </p>
+              <p class="col s6 mid-text" style="text-align: justify;">{{historicalPlaces.[1].description}}</p>
               <img class="col s6" src="{{historicalPlaces.[1].photo}}" style="padding-top: 1.5em;">
-              <!-- width="250" style="padding-top: 1.5em;"-->
             </div>
           </div>
 
-          <div class="col s12  l4">
-            <h3 class=" col s12 light-blue lighten-5">{{historicalPlaces.[2].name}}</h3>
+          <div class="col s12 l4">
+            <h3 class="col s12 light-blue lighten-5">{{historicalPlaces.[2].name}}</h3>
             <div class="row">
               <p class="col s6" style="text-align: justify;">{{historicalPlaces.[2].description}}</p>
               <img class="col s6" src="{{historicalPlaces.[2].photo}}" style="padding-top: 1.5em;">
             </div>
           </div>
         </div>
-
       </div>
-
     </div>
   </div>
   <footer>Copyrights reserved @MntimandeConsultingServices🐊 </footer>
